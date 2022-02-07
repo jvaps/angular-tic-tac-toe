@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+
+    *{
+        background-color: #D30215;
+        color: white;
+        font-family: 'Passion One', impact;
+        ::placeholder {
+            color: white;
+            
+        }
+        input {
+            text-align: center;
+            border-color: black;
+            border-radius: 5px;
+        }
+        button {
+            border-color: black;
+        }
+    @media (max-width: 1024px) {
+        font-size: 12px;
+        app-game {
+        height: 100%;
+        width: 100%;
+    }
+    app-head {
+        .thumb {
+            display: none;
+        }
+    }
+        app-board {
+            height: 500px;
+            width: 100%;
+        }
+        app-square {
+            height: 75px;
+        }
+    }    
+    @media (min-width: 1024px) {
+        font-size: 22px;
+    }
+    
+}

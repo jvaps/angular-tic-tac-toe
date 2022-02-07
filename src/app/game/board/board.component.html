@@ -1,0 +1,19 @@
+<div class="board">
+    <div class="winner" *ngIf="winner">
+        <p>
+            Jogador{{winner}} ganhou!
+        </p>
+    </div>
+    <!-- Fazer lógica para empate -->
+    <div class="turn" *ngIf="!winner">
+        <p>Jogador{{ player }} é a sua vez!</p>
+    </div>
+</div>
+<button (click)="newGame()">Começar um jogo novo</button>
+<main>
+    <app-square 
+        *ngFor="let square of squares; let i = index" 
+        [value]="square"
+        (click)="move(i)"> 
+    </app-square>
+</main>

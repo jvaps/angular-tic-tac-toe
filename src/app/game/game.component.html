@@ -1,0 +1,31 @@
+<app-head
+  (sendPlayer1)="getPlayer1($event)"
+  (sendPlayer2)="getPlayer2($event)"
+  [_player1]="player1"
+  [_player2]="player2"
+>
+</app-head>
+<div class="game">
+    <button *ngIf="!showAbout && !gameStarted" (click)="aboutGame()" >Sobre o jogo</button>
+      <div class="show-rules" *ngIf="showAbout && !gameStarted">
+        O Jogo:
+        <ul>
+            <li>Necessário escolher um personagem por jogador, preferencialmente um personagem da Marvel</li>
+            <li>Os nomes dos personagens da Marvel deverão ser escritos em inglês e terão a foto do respectivo personagem ao lado do nome</li>
+            <li>Caso opte por não escolher um personagem da Marvel, uma imagem será colocada no lugar</li>
+            <li>O Jogador1 irá fazer o movimento inicial</li>
+            <li>O jogador que fizer a combinação de 3, seja na diagonal, horizontal e vertical marcará o primeiro ponto</li>
+            <li>Em caso de empate, nenhum jogador marcará ponto e será necessário reiniciar a partida</li>
+        </ul>
+      </div>
+    <button *ngIf="!playersSelected" (click)="checkField()">Começar o duelo!</button>
+    <app-board
+      *ngIf="playersSelected"
+      [_player1]="player1"
+      [_player2]="player2"
+      (addScore)="addScore($event)"
+    >
+      <!-- <app-board> -->
+    </app-board>
+</div>
+

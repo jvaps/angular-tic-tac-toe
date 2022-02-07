@@ -1,0 +1,15 @@
+<div class="container">
+    <img class='thumb' [src]='_player1.thumb' />
+    <!-- <img class='thumb' src="/assets/celero_marvel.png" *ngIf="!_player1.thumb"/> -->
+    <div class="player1">
+        <input #player1 class="playerInput" type="text" placeholder="Jogador um"
+            (keyup.enter)="setPlayer1(player1.value)" />
+    </div>
+    <div class="score"> {{ _player1.score }} x {{ _player2.score }}</div>
+    <div class="player2">
+        <input #player2 class="playerInput" type="text" placeholder="Jogador dois"
+            (keyup.enter)="setPlayer2(player2.value)" />
+    </div>
+    <img class='thumb' [src]='_player2.thumb' />
+    <!-- <img class='thumb' src="/assets/celero_marvel.png" *ngIf="!_player2.thumb"/> -->
+</div>

@@ -1,0 +1,18 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px;
+}
+app-square {
+    border: 1px gray solid;
+    height: 200px;
+}
+
+.winner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    // max-height: 70px;
+    align-items: center;
+    text-align: center;
+}
